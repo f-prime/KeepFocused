@@ -1,7 +1,8 @@
 let whitelist = [
     "google.com",
     "stackoverflow.com",
-    "slack.com"
+    "slack.com",
+    "github.com"
 ]
 
 chrome.storage.sync.get(['is_on'], (is_on) => {
