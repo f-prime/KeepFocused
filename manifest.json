@@ -1,0 +1,26 @@
+{
+  "name": "KeepFocused: Prevent yourself from getting off task",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Keep yourself from losing focus by double checking whether you want to go to a website.",
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_popup": "start_stop.html"
+  },
+  "icons": {
+        "128": "icons/icon.png"
+  },
+  "content_scripts":[
+      {
+          "js":["js/content.js"],
+          "matches":["<all_urls>"]
+      }
+  ],
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "tabs",
+    "webNavigation",
+    "activeTab"
+  ]
+}
